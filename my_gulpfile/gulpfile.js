@@ -4,12 +4,12 @@
 //			Connecting modules
 // ================================================
 const
-    gulp 	   = require('gulp'),
-	sass 	   = require('gulp-sass'),
-	prefixer = require('gulp-autoprefixer'),
-	cssnano  = require('gulp-cssnano'),
-	concat   = require('gulp-concat'),
-	uglify   = require('gulp-uglify-es').default;
+    gulp 	 = require('gulp'),
+    sass 	 = require('gulp-sass'),
+    prefixer = require('gulp-autoprefixer'),
+    cssnano  = require('gulp-cssnano'),
+    concat   = require('gulp-concat'),
+    uglify   = require('gulp-uglify-es').default;
 
 
 // ================================================
@@ -19,13 +19,13 @@ let
     src = {
         js: [
             'js/classes.js',
-			'js/function.js',
+            'js/function.js',
             'js/base.js'
         ],
-		all_js: 'js/**/*.js',
+        all_js: 'js/**/*.js',
         sass: 'sass/**/*.sass'
     },
-	dest = {
+    dest = {
         js: 'electron/js',
         css: 'electron/css'
     }
