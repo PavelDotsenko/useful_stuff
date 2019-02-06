@@ -3,32 +3,34 @@
 // ================================================
 //			Connecting modules
 // ================================================
-const
-    gulp     = require('gulp'),
-    sass     = require('gulp-sass'),
-    prefixer = require('gulp-autoprefixer'),
-    cssnano  = require('gulp-cssnano'),
-    concat   = require('gulp-concat'),
-    uglify   = require('gulp-uglify-es').default;
-
+const gulp 	   = require('gulp'),
+	  sass 	   = require('gulp-sass'),
+	  prefixer = require('gulp-autoprefixer'),
+	  cssnano  = require('gulp-cssnano'),
+	  concat   = require('gulp-concat'),
+	  uglify   = require('gulp-uglify-es').default;
 
 // ================================================
 //			Variables
 // ================================================
-let
-    src = {
-        js: [
-            'js/classes.js',
-            'js/function.js',
-            'js/base.js'
-        ],
-        all_js: 'js/**/*.js',
-        sass: 'sass/**/*.sass'
-    },
-    dest = {
-        js: 'electron/js',
-        css: 'electron/css'
-    }
+let src = {
+		js: [
+			'js/classes/Translate.js',
+			'js/classes/ItemsManager.js',
+			'js/lockr.js',
+			'js/function.js',
+			'js/intarface.js',
+			'js/base.js',
+			'js/page-settings.js',
+			'js/main-menu.js'
+		],
+		all_js: 'js/**/*.js',
+		sass: 'sass/**/*.sass'
+	},
+	dest = {
+		js: 'electron/js',
+		css: 'electron/css'
+		}
 
 // ================================================
 //			Functions
@@ -55,4 +57,4 @@ function watchFiles() {
 
 gulp.task('styles', styles)
 gulp.task('scripts', scripts)
-gulp.task('default', gulp.series('styles', 'scripts', 'watch'))
+gulp.task('default', gulp.series('styles', 'scripts', gulp.parallel(watchFiles)))
