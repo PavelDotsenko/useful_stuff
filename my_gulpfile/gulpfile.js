@@ -4,8 +4,8 @@
 //			Connecting modules
 // ================================================
 const
-    gulp 	 = require('gulp'),
-    sass 	 = require('gulp-sass'),
+    gulp     = require('gulp'),
+    sass     = require('gulp-sass'),
     prefixer = require('gulp-autoprefixer'),
     cssnano  = require('gulp-cssnano'),
     concat   = require('gulp-concat'),
